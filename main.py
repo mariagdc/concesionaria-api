@@ -1,9 +1,11 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from contextlib import asynccontextmanager
-from database import create_db_and_tables
+from sqlmodel import Session
+from database import create_db_and_tables, get_session
+from repository import AutoRepository, VentaRepository
 import autos
 import ventas
-from repository import EstadisticasRepository
+import models
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

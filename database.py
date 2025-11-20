@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configuración de la base de datos
-DATABASE_URL = os.getenv("DATABASE_URL", "DATABASE_URL=postgresql://usuario:/compraventa")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://usuario:admin@admin:5432/compraventa")
 
 # Motor síncrono para SQLModel
 if DATABASE_URL.startswith("sqlite"):

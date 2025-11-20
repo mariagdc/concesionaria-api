@@ -1,6 +1,7 @@
 from sqlmodel import Session, select, func
 from typing import List, Optional
 from models import Auto, AutoCreate, AutoUpdate, Venta, VentaCreate, VentaUpdate
+import datetime
 import re
 
 class AutoRepository:
